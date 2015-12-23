@@ -40,7 +40,223 @@ The worst case scenario is that you severly mess something up, and you don't hav
 
 We completely agree! (about the first part) LaTeX is pretty! That's why everything you write in NoTeX, including the markdown, can be compiled straight to LaTeX when you're done writing your notes. This allows you to go back, and make everything absolutely perfect when you don't need to be typing a thousand miles a minute. 
 
-### More Documentation
+<<<<<<< HEAD
+### But What if I REALLY Need to Write Something in LaTeX?
 
-The rest of the documentation is available in the NoTeX format in the .notex readme file. Feel free to take a look there for more information!
+Fine then. If you really don't like our language that much. (just kidding, we know you love it)
+
+In all seriousness though, if there's something you need to do which is either not yet supported by NoTeX, or you don't yet know the NoTeX command for, all you need to do is type \\latex on a new line, then your latex code, then \\end.
+
+## NoTeX Math Language Documentation
+
+Below is the documentation for all of the basic features of the NoTeX math language.
+
+To write an equation in NoTeX format, simply prefix a line with a dollar sign ($).
+
+e.g.
+
+     $ This line is now being parsed as a NoTeX equation.
+
+Any lines parsed with the math parser will be put in an equation block when compiled to LaTeX. So this would compile to:
+
+    begin{equation}
+     This line is now being parsed as a NoTeX equation.
+    end{equation}
+
+### General Notes
+
+NoTeX is somewhat more sensitive to whitespace then LaTeX is. It uses whitespace to contextualize what you're saying, so break things up where appropriote.
+
+### Symbols
+
+Commonly used mathematical symbols are compiled into their latex equivalents. Some of these map one to one with LaTeX commands, and others are simply useful shortcuts. The list of all these shortcuts is below. You may use the original LaTeX syntax for this as well. (e.g. either \leq or <= will be accepted)
+
+|     NoTeX Syntax      |    NoTeX Alternative   |   Equivalent LaTeX    |
+|-----------------------|------------------------|-----------------------|
+| >=                    | \geq                   | \geq                  |
+| <=                    | \leq                   | \leq                  |
+| !=                    | \neq                   | \neq                  |
+| ~=                    | \approx                | \approx               |
+| dot a                 |                        | \dot{a}               |
+| hat a                 | a^                     | \hat{a}               |
+| bar a                 |                        | \bar{a}               |
+| vec a                 | a@                     | \vec{a}               |
+| \x                    |                        | \cross                |
+| \inf                  |                        | \infty                |
+| '                     | \prime                 | \prime                |
+| &#124                 | \mid                   | \mid                  |
+| "abc123"              |                        | ``abc123''            |
+| sin a                 | sina                   | \sin a                |
+| cos a                 | cosa                   | \cos a                |
+| tan a                 | tana                   | \tan a                |
+| sec a                 | seca                   | \sec a                |
+| csc a                 | csca                   | \csc a                |
+| cot a                 | cotha                  | \cot a                |
+| sinh a                | sinha                  | \sinh a               |
+| cosh a                | cosha                  | \cosh a               |
+| tanh a                | tanha                  | \tanh a               |
+| coth a                | cotha                  | \coth a               |
+| asin a                | asina                  | \arcsin a             |
+| acos a                | acosa                  | \arccos a             |
+| atan a                | atana                  | \arctan a             |
+
+Greek letters and all other symbols are written in exactly the same way they are in LaTeX.
+  
+     \alpha, \beta, \gamma
+
+### Grouping
+
+Where LaTeX uses curly braces ({}) for grouping expressions, NoTeX uses a combination of parsing via order of operations, whitespace, and parenthesis when you need to manually group things yourself to figure out where you want what. This does mean that in order to use parenthesis in your math, you need to type out \( and \) respectively. While this is a bit of a downside to the system, we found that you end up saving much more time than you loose given that in reality, people don't use parenthesis that much.
+
+### Super and Sub Scripts
+
+Like in LaTeX, you just use ^ for superscript, and _ for subscript. Keep in mind that there can't be a space after your carrot
+
+### Fractions
+
+In NoTeX, we figure out fractions for you, not the other way around. NoTeX uses basic operator prescidence to determine what should be on what side of the fraction, and puts it all together for you!
+
+Here's an example:
+
+    bc / def + 2abc / def = 3abc / def
+
+Which compiles to:
+
+    frac{abc}{def} + \frac{2abc}{def} = \frac{3abc}{def}
+
+Whereas:
+
+    bc / (def + 2abc) / def = 3abc / def
+
+compiles to:
+  
+    frac{\frac{abc}{def + 2abc}}{def} = \frac{3abc}{def}
+
+This is particularly convenient when working with equations in physics, which have a tendency to involve lots of complicated fractions.
+
+    F@_g = GmM / d^2
+
+is much simpler, and easier to write than
+
+    vec{F}_g = \frac{GmM}{d^2}
+
+and both end up producing the same result:
+
+![Equation Two](http://i.imgur.com/WMwZiWt.png)
+
+### Multiplication
+
+There are two ways of typesetting multiplication in NoTeX. To create a multiplication symbol, or in LaTeX, a `\cdot` simply use asterisk (\*).
+
+Easy enough right? Now we get to the second way. To do this, simply use double asterists (\*\*). This also creates a `\cdot`! The difference between the two is in how they're parsed. Double asterisks assumes that it should be executed last in the order of operations (i.e. it has low prescedence).
+
+This means that this:
+
+    bc / def ** abc / def = a^2b^2c^2 / d^2e^2f^2 = \(abc / def\)^2
+
+compiles to:
+
+    frac{abc}{def} \cdot \frac{abc}{def} = \frac{a^2b^2c^2}{d^2e^2f^2} = \left(\frac{abc}{def}\right)^2
+
+while this:
+
+    bc / def * abc / def = a^2b^2c^2 / d^2e^2f^2 = \(abc / def\)^2
+
+compiles to:
+
+    frac{\frac{abc}{def \cdot abc}}{def} = \frac{a^2b^2c^2}{d^2e^2f^2} = \left(\frac{abc}{def}\right)^2
+
+## Advanced Constructs
+
+Now we get into the fun stuff! Advanced constructs are made leagues faster in KaTeX by using a somewhat different structure than LaTeX. Let's dive right in!
+
+### Sums and Productions
+
+Now we get to some more interesting mathematics! Sums and productions! Yay!
+
+We'll only go over sums here, as productions work in the exact same way. Simply replace sum with prod. 
+
+**Basic summation:**
+
+    sum of f(x)
+
+LaTeX:
+  
+    \sum f(x)
+
+**Sum over some domain:**
+
+    sum x \in S of f(x)
+
+LaTeX:
+  
+    \sum_{x \in S} f(x)
+
+**Sum over some set of integers in a range:**
+
+    sum i = 0 to \inf of f(i)
+
+LaTeX:
+
+    \sum_{i = 0}^{\infty} f(i)
+
+**Chaining Sums:**
+
+    sum i = 0 to 10 sum j = 0 to 10 sum k = 0 to 10 of i * j * k
+
+LaTeX:
+
+    \sum_{i = 0}^{10} \sum_{j = 0}^{10} \sum_{k = 0}^{10} i \cdot j \cdot k
+
+### Integrals
+
+Integrals are almost exactly the same as sums, but there are a few addition things to take note of!
+
+While this first bit is the same as sums, we'll review anyways for those just skimming the documentation.
+
+**Basic integration:**
+
+    int f(x) dx
+
+LaTeX:
+
+    \int f(x) \, dx
+
+**Integrating over a domain:**
+
+    int D of f(x) \, dx
+
+LaTeX:
+
+    \int_{D} f(x) \, dx
+
+**Bounded Integrals:**
+
+    int a to b of f(x) dx
+
+LaTeX:
+
+    \int_{a}^{b} f(x) \, dx
+
+**Multivariable Integration:**
+
+    iint f(x,y,z) dx dy dz
+
+LaTeX:
+
+    \iiint f(x,y,z) \, dx \, dy \, dz
+
+**Bounded Multivariable Integration:** 
+
+     int a to b int b to c int d to e of f(x,y,z) dx dy dz
+
+LaTeX:
+
+     \int_{a}^{b} \int_{b}^{c} \int_{d}^{e} f(x,y,z) \, dx \, dy \, dz
+
+Nice and easy! All you need to do is chain integrals in the same way you chain sums!
+
+### NoTeX Sample
+
+Want to see NoTeX in action? This entire readme file is also available in NoTeX format! Just take a look at README.notex
 
