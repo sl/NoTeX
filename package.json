@@ -1,10 +1,13 @@
 {
   "name": "NoTeX",
-  "version": "0.0.1",
-  "description": "An editor and document format for quickly typesetting notes.",
+  "version": "0.0.7",
+  "description": "NoTeX is a language, and editor for said language which simplifies the process of live typesetting notes in class.",
   "main": "html/index.html",
   "scripts": {
     "install": "make all",
+    "preversion": "make PACKAGE",
+    "version": "make manifest.json PACKAGE && git add manifest.json",
+    "postversion": "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
