@@ -26,3 +26,6 @@ Temporary Items
 
 # Node Packages
 node_modules
+
+# Libraries
+html/js/libs/*/
