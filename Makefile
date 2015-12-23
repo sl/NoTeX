@@ -1,6 +1,6 @@
 all: LIBRARIES
 
-LIBRARIES: html/js/libs/ace html/js/libs/mathquill
+LIBRARIES: html/js/libs/ace html/js/libs/mathquill MARKED_LIB
 
 html/js/libs/ace: node_modules/ace-builds/src-min
 	mkdir -p html/js/libs/
@@ -12,3 +12,9 @@ html/js/libs/mathquill: node_modules/mathquill/build
 
 node_modules/mathquill/build:
 	cd node_modules/mathquill/; make
+
+MARKED_LIB: html/js/libs/marked/lib/marked.js
+
+html/js/libs/marked/lib/marked.js: node_modules/marked/lib/marked.js
+	mkdir -p html/js/libs/marked/lib/
+	cp node_modules/marked/lib/marked.js html/js/libs/marked/lib/
