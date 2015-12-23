@@ -28,7 +28,7 @@ In LaTeX, this would be written as:
 
 While the two are exactly the same length in characters, the LaTeX expression is much more difficult to type. On top of that, if you consider the fact that the LaTeX expression won't do anything unless it's inside an equation, the document is set up properly, etc. then you begin to see how NoTeX can save some time.
 
-NoTeX is also designed to ready somewhat like how you'd actually read mathematical notation. This means that what you're typing is going to be quite similar to what the lecturer is saying. This minimizes the obnoxious mental task of translating the lecturers words into a typesetting language and allows you to focus on understanding the material while you copy it down for future reference.
+NoTeX is also designed to read somewhat like how you'd actually read mathematical notation. This means that what you're typing is going to be quite similar to what the lecturer is saying. This minimizes the obnoxious mental task of translating the lecturers words into a typesetting language and allows you to focus on understanding the material while you copy it down for future reference.
 
 ### Flexibility
 
