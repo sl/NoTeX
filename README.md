@@ -2,6 +2,10 @@
 
 Notex is a super simplistic, and super useful program for creating typeset documents on the fly. Note taking in classes demands speed, and if you aren't a LaTeX genie, typesetting notes can be far too slow. That's where NoTeX comes in! NoTeX is a simple language for typesettings notes on mathematics, physics, computer science, what have you. It's designed to be as easy to use in a classroom setting as possible.
 
+### Work in Progress
+
+Please note that NoTeX is still a work in progress. At this point, it is not stable. A stable build will be available soon, so keep checking back if the project at all interests you!
+
 ### Nomenclature
 
 The name NoTeX is used to refer to both the chrome app which contains the editor, and the language which all .notex files are written in. 

@@ -27,3 +27,9 @@ Temporary Items
 # Sublime Files
 *.sublime-workspace
 *.sublime-project
+
+# Node Packages
+node_modules
+
+# Libraries
+html/js/libs/*/
