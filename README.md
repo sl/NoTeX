@@ -20,7 +20,7 @@ Need to write a complex integral? No problem.
      
 Which produces this beauty:
 
-$ int 0 to \pi / 2 int 0 to 2\pi int 0 to 1 of \rho^2 sin\phi d\rho d\theta d\phi
+![Equation](http://i.imgur.com/v68UZvz.png)
 
 In LaTeX, this would be written as:
 
