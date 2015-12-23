@@ -1,0 +1,27 @@
+{
+  "name": "NoTeX",
+  "version": "0.0.1",
+  "description": "An editor and document format for quickly typesetting notes.",
+  "main": "html/index.html",
+  "scripts": {
+    "install": "make all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sl/NoTeX.git"
+  },
+  "author": "Sam Lazarus <tyu.sam@gmail.com>",
+  "contributors": [
+    "Ryan Leonard (http://ryanleonard.us)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sl/NoTeX/issues"
+  },
+  "dependencies": {
+    "ace-builds": "^1.2.2",
+    "marked": "^0.3.5",
+    "mathquill": "git://github.com/mathquill/mathquill#v0.9.4"
+  }
+}
