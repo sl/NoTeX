@@ -6,6 +6,14 @@ Notex is a super simplistic, and super useful program for creating typeset docum
 
 Please note that NoTeX is still a work in progress. At this point, it is not stable. A stable build will be available soon, so keep checking back if the project at all interests you!
 
+### Installation
+
+You need to have `node` and `npm` to build this project.
+
+1. Pull the code - a.k.a. `git clone https://github.com/sl/NoTeX.git`
+2. Navigate into the directory (`cd NoTeX`)
+3. Install to pull dependencies and build the project: `npm install`
+
 ### Nomenclature
 
 The name NoTeX is used to refer to both the chrome app which contains the editor, and the language which all .notex files are written in. 
