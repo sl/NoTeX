@@ -20,7 +20,7 @@ Need to write a complex integral? No problem.
      
 Which produces this beauty:
 
-![Equation One](http://i.imgur.com/v68UZvz.png)
+![Equation](http://i.imgur.com/v68UZvz.png)
 
 In LaTeX, this would be written as:
 
@@ -28,7 +28,7 @@ In LaTeX, this would be written as:
 
 While the two are exactly the same length in characters, the LaTeX expression is much more difficult to type. On top of that, if you consider the fact that the LaTeX expression won't do anything unless it's inside an equation, the document is set up properly, etc. then you begin to see how NoTeX can save some time.
 
-NoTeX is also designed to read somewhat like how you'd actually read mathematical notation. This means that what you're typing is going to be quite similar to what the lecturer is saying. This minimizes the obnoxious mental task of translating the lecturers words into a typesetting language and allows you to focus on understanding the material while you copy it down for future reference.
+NoTeX is also designed to ready somewhat like how you'd actually read mathematical notation. This means that what you're typing is going to be quite similar to what the lecturer is saying. This minimizes the obnoxious mental task of translating the lecturers words into a typesetting language and allows you to focus on understanding the material while you copy it down for future reference.
 
 ### Flexibility
 
@@ -40,6 +40,7 @@ The worst case scenario is that you severly mess something up, and you don't hav
 
 We completely agree! (about the first part) LaTeX is pretty! That's why everything you write in NoTeX, including the markdown, can be compiled straight to LaTeX when you're done writing your notes. This allows you to go back, and make everything absolutely perfect when you don't need to be typing a thousand miles a minute. 
 
+<<<<<<< HEAD
 ### But What if I REALLY Need to Write Something in LaTeX?
 
 Fine then. If you really don't like our language that much. (just kidding, we know you love it)
@@ -258,6 +259,4 @@ Nice and easy! All you need to do is chain integrals in the same way you chain s
 ### NoTeX Sample
 
 Want to see NoTeX in action? This entire readme file is also available in NoTeX format! Just take a look at README.notex
-
-
 
