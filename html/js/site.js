@@ -91,7 +91,7 @@ function updatePreview() {
       }
       preview.appendChild(contentDiv);
       if (type !== 'markdown' && /* todo -- remove */ type !== 'math') {
-        $(contentDiv).mathquill();
+        // todo -- render latex
       }
     } catch (e) {
       contentDiv.innerHTML = content;
