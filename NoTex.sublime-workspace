@@ -1,0 +1,758 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"parseNote",
+				"parseNotexTokens"
+			],
+			[
+				"parse",
+				"parseTree"
+			],
+			[
+				"parseNo",
+				"parseNotexTokens"
+			],
+			[
+				"previous",
+				"previousLength"
+			],
+			[
+				"prev",
+				"previousLength"
+			],
+			[
+				"preview",
+				"previewTimeout"
+			],
+			[
+				"previou",
+				"previousContent"
+			],
+			[
+				"pre",
+				"previousLength"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"acc",
+				"accumulationType"
+			],
+			[
+				"accu",
+				"accumulationType"
+			],
+			[
+				"to",
+				"toDirectionalForm"
+			],
+			[
+				"absolute",
+				"absoluteBounds"
+			],
+			[
+				"Offensive",
+				"OffensiveHBInfo"
+			],
+			[
+				"Offensi",
+				"Offensive"
+			],
+			[
+				"actio",
+				"actionTimeout"
+			],
+			[
+				"dodge",
+				"dodgeCooldown"
+			],
+			[
+				"acti",
+				"action"
+			],
+			[
+				"on",
+				"onPlatform"
+			],
+			[
+				"shield",
+				"shieldstun"
+			],
+			[
+				"act",
+				"actionTimeout"
+			],
+			[
+				"camera",
+				"cameraScale"
+			],
+			[
+				"camer",
+				"cameraScale"
+			],
+			[
+				"minScale",
+				"minScale"
+			],
+			[
+				"jump",
+				"jumpVelocity"
+			],
+			[
+				"center",
+				"centerPosition"
+			],
+			[
+				"user",
+				"userPlayer"
+			],
+			[
+				"game",
+				"gameStateInfo"
+			],
+			[
+				"stroke",
+				"strokeStyle"
+			],
+			[
+				"fil",
+				"fillRect"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"testSetting",
+				"testSetting1"
+			],
+			[
+				"gameS",
+				"gameState"
+			],
+			[
+				"gameState",
+				"gameStateInfo"
+			],
+			[
+				"render",
+				"renderScreenOutline"
+			],
+			[
+				"asp",
+				"aspectRatio"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "html/js/site.js",
+			"settings":
+			{
+				"buffer_size": 4742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/css/style.css",
+			"settings":
+			{
+				"buffer_size": 7104,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "html/js/notex.js",
+			"settings":
+			{
+				"buffer_size": 3366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Welcome to NoTeX!\n\nNotes is a super simplistic, and super useful program for creating typeset documents on the fly. Note taking in classes demands speed, and if you aren't a LaTeX genie, typesetting notes can be far too slow. That's where NoTeX comes in! NoTeX is a simple language for typesettings notes on mathematics, physics, computer science, what have you. It's designed to be as easy to use in a classroom setting as possible.\n\n### Nomenclature\n\nThe name NoTeX is used to refer to both the chrome app which contains the editor, and the language which all .notex files are written in. \n\n### (Github Flavoured) Markdown Support\n\nLaTeX is great for math, but when it comes to typesetting just plain english, it can be somewhat cumbersome. That's why NoTeX allows you to write anything that's not en equation as if you were just writing in markdown. In a class, there's no time to deal with all of LaTeX's excess formatting options. With markdown, you can simply type and go. All the features of markdown you know and love are supported. On top of all this, when you compile your project to LaTeX, your markdown sections get compiled to LaTeX with the same styling as the rendered markdown had.\n\n### Writing Equations With Ease\n\nWhile the array of options for typesetting equations LaTeX provides is incredibly useful when writing a dissertation for example, it can be extremely overwhelming and verbose, making it hard to use quickly. NoTeX provides a much simpler syntax for notetaking which removes a lot of the bells and whistles LaTeX gives you in favor of speed. NoTeX also aims to use less awkward keys and weird constructs (we're looking at you curly braces) opting instead for easy to type keywords and simple mathematical symbols.\n\nNeed to write a complex integral? No problem.\n\n     int 0 to \\pi / 2 int 0 to 2\\pi int 0 to 1 of \\rho^2 sin\\phi d\\rho d\\theta d\\phi\n     \nWhich produces this beauty:\n\n$ int 0 to \\pi / 2 int 0 to 2\\pi int 0 to 1 of \\rho^2 sin\\phi d\\rho d\\theta d\\phi\n\nIn LaTeX, this would be written as:\n\n     \\int_0^{\\frac{\\pi}{2}}\\int_0^{2\\pi}\\int_0^1 d\\rho^2 sin\\phi d\\rho d\\theta d\\phi\n\nWhile the two are exactly the same length in characters, the LaTeX expression is much more difficult to type. On top of that, if you consider the fact that the LaTeX expression won't do anything unless it's inside an equation, the document is set up properly, etc. then you begin to see how NoTeX can save some time.\n\nNoTeX is also designed to ready somewhat like how you'd actually read mathematical notation. This means that what you're typing is going to be quite similar to what the lecturer is saying. This minimizes the obnoxious mental task of translating the lecturers words into a typesetting language and allows you to focus on understanding the material while you copy it down for future reference.\n\n### Flexibility\n\nLaTeX can be quite fussy sometimes. Miss one curly brace, and your entire document breaks. While forcing you to follow a rigourous syntax is usually a good thing, it's not that great when you don't have time to stop and make everything perfect. NoTeX is much less particular. It has a variety of different safety nets for you, so that even if you don't use exactly the right syntax, there's a good chance your notes will come out how you expected them to.\n\nThe worst case scenario is that you severly mess something up, and you don't have time to go back and fix it. We've got you covered there too. Even if a block of math doesn't compile correctly, the rest of your notes (your other math blocks, markdown, etc.) will still display for you so you can carry on and fix your mistake at a later time.\n\n### But LaTeX is so Pretty! Why would I want to use NoTeX?\n\nWe completely agree! (about the first part) LaTeX is pretty! That's why everything you write in NoTeX, including the markdown, can be compiled straight to LaTeX when you're done writing your notes. This allows you to go back, and make everything absolutely perfect when you don't need to be typing a thousand miles a minute. \n\n### But What if I REALLY Need to Write Something in LaTeX?\n\nFine then. If you really don't like our language that much. (just kidding, we know you love it)\n\nIn all seriousness though, if there's something you need to do which is either not yet supported by NoTeX, or you don't yet know the NoTeX command for, all you need to do is type \\\\latex on a new line, then your latex code, then \\\\end.\n\n\\latex\n\\int_0^{\\frac{\\pi}{2}}\\int_0^{2\\pi}\\int_0^1 d\\rho^2 sin\\phi d\\rho d\\theta d\\phi\n\\end\n\n## NoTeX Math Language Documentation\n\nBelow is the documentation for all of the basic features of the NoTeX math language.\n\nTo write an equation in NoTeX format, simply prefix a line with a dollar sign ($).\n\ne.g.\n\n     $ This line is now being parsed as a NoTeX equation.\n\nAny lines parsed with the math parser will be put in an equation block when compiled to LaTeX. So this would compile to:\n\n    begin{equation}\n     This line is now being parsed as a NoTeX equation.\n    end{equation}\n\n### General Notes\n\nNoTeX is somewhat more sensitive to whitespace then LaTeX is. It uses whitespace to contextualize what you're saying, so break things up where appropriote.\n\n### Symbols\n\nCommonly used mathematical symbols are compiled into their latex equivalents. Some of these map one to one with LaTeX commands, and others are simply useful shortcuts. The list of all these shortcuts is below. You may use the original LaTeX syntax for this as well. (e.g. either \\leq or <= will be accepted)\n\n|     NoTeX Syntax      |    NoTeX Alternative   |   Equivalent LaTeX    |\n|-----------------------|------------------------|-----------------------|\n| >=                    | \\geq                   | \\geq                  |\n| <=                    | \\leq                   | \\leq                  |\n| !=                    | \\neq                   | \\neq                  |\n| ~=                    | \\approx                | \\approx               |\n| dot a                 |                        | \\dot{a}               |\n| hat a                 | a^                     | \\hat{a}               |\n| bar a                 |                        | \\bar{a}               |\n| vec a                 | a@                     | \\vec{a}               |\n| \\x                    |                        | \\cross                |\n| \\inf                  |                        | \\infty                |\n| '                     | \\prime                 | \\prime                |\n| &#124                 | \\mid                   | \\mid                  |\n| \"abc123\"              |                        | ``abc123''            |\n| sin a                 | sina                   | \\sin a                |\n| cos a                 | cosa                   | \\cos a                |\n| tan a                 | tana                   | \\tan a                |\n| sec a                 | seca                   | \\sec a                |\n| csc a                 | csca                   | \\csc a                |\n| cot a                 | cotha                  | \\cot a                |\n| sinh a                | sinha                  | \\sinh a               |\n| cosh a                | cosha                  | \\cosh a               |\n| tanh a                | tanha                  | \\tanh a               |\n| coth a                | cotha                  | \\coth a               |\n| asin a                | asina                  | \\arcsin a             |\n| acos a                | acosa                  | \\arccos a             |\n| atan a                | atana                  | \\arctan a             |\n\nGreek letters and all other symbols are written in exactly the same way they are in LaTeX.\n  \n     \\alpha, \\beta, \\gamma\n\n### Grouping\n\nWhere LaTeX uses curly braces ({}) for grouping expressions, NoTeX uses a combination of parsing via order of operations, whitespace, and parenthesis when you need to manually group things yourself to figure out where you want what. This does mean that in order to use parenthesis in your math, you need to type out \\( and \\) respectively. While this is a bit of a downside to the system, we found that you end up saving much more time than you loose given that in reality, people don't use parenthesis that much.\n\n### Super and Sub Scripts\n\nLike in LaTeX, you just use ^ for superscript, and _ for subscript. Keep in mind that there can't be a space after your carrot\n\n### Fractions\n\nIn NoTeX, we figure out fractions for you, not the other way around. NoTeX uses basic operator prescidence to determine what should be on what side of the fraction, and puts it all together for you!\n\nHere's an example:\n\n    bc / def + 2abc / def = 3abc / def\n\nWhich compiles to:\n\n    frac{abc}{def} + \\frac{2abc}{def} = \\frac{3abc}{def}\n\nWhereas:\n\n    bc / (def + 2abc) / def = 3abc / def\n\ncompiles to:\n  \n    frac{\\frac{abc}{def + 2abc}}{def} = \\frac{3abc}{def}\n\nThis is particularly convenient when working with equations in physics, which have a tendency to involve lots of complicated fractions.\n\n    F@_g = GmM / d^2\n\nis much simpler, and easier to write than\n\n    vec{F}_g = \\frac{GmM}{d^2}\n\nand both end up producing the same result:\n\n\\latex\n\\vec{F}_g = \\frac{GmM}{d^2}\n\\end\n\n### Multiplication\n\nThere are two ways of typesetting multiplication in NoTeX. To create a multiplication symbol, or in LaTeX, a `\\cdot` simply use asterisk (\\*).\n\nEasy enough right? Now we get to the second way. To do this, simply use double asterists (\\*\\*). This also creates a `\\cdot`! The difference between the two is in how they're parsed. Double asterisks assumes that it should be executed last in the order of operations (i.e. it has low prescedence).\n\nThis means that this:\n\n    bc / def ** abc / def = a^2b^2c^2 / d^2e^2f^2 = \\(abc / def\\)^2\n\ncompiles to:\n\n    frac{abc}{def} \\cdot \\frac{abc}{def} = \\frac{a^2b^2c^2}{d^2e^2f^2} = \\left(\\frac{abc}{def}\\right)^2\n\nwhile this:\n\n    bc / def * abc / def = a^2b^2c^2 / d^2e^2f^2 = \\(abc / def\\)^2\n\ncompiles to:\n\n    frac{\\frac{abc}{def \\cdot abc}}{def} = \\frac{a^2b^2c^2}{d^2e^2f^2} = \\left(\\frac{abc}{def}\\right)^2\n\n## Advanced Constructs\n\nNow we get into the fun stuff! Advanced constructs are made leagues faster in KaTeX by using a somewhat different structure than LaTeX. Let's dive right in!\n\n### Sums and Productions\n\nNow we get to some more interesting mathematics! Sums and productions! Yay!\n\nWe'll only go over sums here, as productions work in the exact same way. Simply replace sum with prod. \n\n**Basic summation:**\n\n    um of f(x)\n\nLaTeX:\n  \n    sum f(x)\n\n**Sum over some domain:**\n\n    um x \\in S of f(x)\n\nLaTeX:\n  \n    sum_{x \\in S} f(x)\n\n**Sum over some set of integers in a range:**\n\n    um i = 0 to \\inf of f(i)\n\nLaTeX:\n\n    sum_{i = 0}^{\\infty} f(i)\n\n**Chaining Sums:**\n\n    sum i = 0 to 10 sum j = 0 to 10 sum k = 0 to 10 of i * j * k\n\nLaTeX:\n\n    sum_{i = 0}^{10} \\sum_{j = 0}^{10} \\sum_{k = 0}^{10} i \\cdot j \\cdot k\n\n### Integrals\n\nIntegrals are almost exactly the same as sums, but there are a few addition things to take note of!\n\nWhile this first bit is the same as sums, we'll review anyways for those just skimming the documentation.\n\n**Basic integration:**\n\n    int f(x) dx\n\nLaTeX:\n\n    int f(x) \\, dx\n\n**Integrating over a domain:**\n\n    int D of f(x) \\, dx\n\nLaTeX:\n\n    int_{D} f(x) \\, dx\n\n**Bounded Integrals:**\n\n    int a to b of f(x) dx\n\nLaTeX:\n\n    int_{a}^{b} f(x) \\, dx\n\n**Multivariable Integration:**\n\n    iint f(x,y,z) dx dy dz\n\nLaTeX:\n\n    iiint f(x,y,z) \\, dx \\, dy \\, dz\n\n**Bounded Multivariable Integration:** \n\n     int a to b int b to c int d to e of f(x,y,z) dx dy dz\n\nLaTeX:\n\n     \\int_{a}^{b} \\int_{b}^{c} \\int_{d}^{e} f(x,y,z) \\, dx \\, dy \\, dz\n\nNice and easy! All you need to do is chain integrals in the same way you chain sums!\n\n\n\n",
+			"file": "README.notex",
+			"file_size": 11754,
+			"file_write_time": 130764479920000000,
+			"settings":
+			{
+				"buffer_size": 11756,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "background.js",
+			"settings":
+			{
+				"buffer_size": 137,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"last_filter": "set syntax h",
+		"selected_items":
+		[
+			[
+				"set syntax h",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax: htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax e",
+				"Set Syntax: Elm"
+			],
+			[
+				"sy",
+				"Set Syntax: Elm"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"upgrad",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package contro: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"stop rea",
+				"Elm: Stop Reactor"
+			],
+			[
+				"start rea",
+				"Elm: Start Reactor"
+			],
+			[
+				"syntax",
+				"Set Syntax: Elm"
+			],
+			[
+				"syntax ",
+				"Set Syntax: Elm"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package co",
+				"Package Control: Add Repository"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control add",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/css",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/js"
+	],
+	"file_history":
+	[
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/index.html",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/js/site.js",
+		"/Users/Sam/Downloads/Cgame-master/cgame-lib.js",
+		"/Users/Sam/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/js/notex.js",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/manifest.json",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/window.html",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/js/background.js",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/window.html",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/style.css",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/css/style.css",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/html/css/style.css",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/js/background.js",
+		"/Users/Sam/Documents/Development/Web/Javascript/Chrome Apps/NoTex/background.js",
+		"/Users/Sam/Downloads/Cgame-master/Samples/Billiards/js/site.js",
+		"/Users/Sam/Documents/Development/Web/Elm/LiveTex/index.html",
+		"/Users/Sam/Documents/Development/Web/Elm/LiveTex/js/site.js",
+		"/Users/Sam/Documents/Development/Viruses (DO NOT OPEN)/crash.sh",
+		"/Users/Sam/Documents/Game Design Class/Example Projects/Collision/AABB.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Collision/Collider.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Collision/AABB.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Vec2.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Main.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Collider.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Collision.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Player.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Character.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Basic Platformer/Vec2.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Basic Platformer/Main.elm",
+		"/Users/Sam/Documents/Game Design Class/Example Libraries/Vec2D.elm",
+		"/Users/Sam/Documents/Game Design Class/Example Libraries/Vector.elm",
+		"/Users/Sam/Documents/Development/Web/W3 Standard/Brawler -- JS Prototype/js/site.js",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Elm/Projects/key-ninja/Vec2.elm",
+		"/Users/Sam/Documents/Development/Web/Elm/Brawler/Input.elm",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Web/Canvas Game Utils/cgame-lib.js",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Web/Canvas Game Utils/Samples/Billiards/js/site.js",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Web/Canvas Game Utils/Samples/Physics Demo/js/site.js",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Web/Canvas Game Utils/Samples/Billiards/index.html",
+		"/Users/Sam/Documents/Old Documents/Old Dev Files/Web/Canvas Game Utils/Samples/Derpy Bird/index.html",
+		"/Users/Sam/Documents/Development/Elm/Brawler/Main.elm",
+		"/Users/Sam/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 97.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".splice(0, 1)",
+			"flag",
+			"readUntill",
+			"parseNotexTokens",
+			"tokens",
+			"tokenize",
+			"parseNotex",
+			"compileParsedNotex",
+			"compileNotex",
+			"content",
+			"remainingExpression",
+			".notex",
+			"remainingExpression.sear",
+			"[];\n",
+			"notex",
+			"parseNotex",
+			"compileNotex",
+			"tokenize",
+			"search",
+			"math",
+			"notex",
+			"parseInt",
+			"parse",
+			"notex",
+			"makeTokenizer",
+			"{\n",
+			"parse",
+			"notex",
+			"compileNotex",
+			"parseTree",
+			"Till",
+			"until",
+			"divisi",
+			"pi",
+			"previousLength",
+			"[A-Za-z]+\\([A-Za-z0-9]",
+			"[A-Za-z]+\\([A-Za-z0-9])",
+			"hi",
+			"^(  ).",
+			"^\\t.",
+			"^\\t.*",
+			"  ",
+			"Latex",
+			"a                   |",
+			"a",
+			" a",
+			"       ",
+			"      ",
+			"| \\",
+			"| ",
+			"| \\",
+			"|",
+			"^( *)(.*[{,])",
+			"^( *.*[{,])",
+			"^(\\S)",
+			"(^\\S*.*?,) +",
+			"(^\\S*.*?,)\\s*",
+			"(^\\S*,)\\s*",
+			"body",
+			"markdown",
+			"$",
+			"##",
+			"partition",
+			"\\",
+			" ''",
+			"''",
+			" contentDiv.setAt",
+			"innerHT",
+			"parse",
+			"notex",
+			"note",
+			"return",
+			"}\n",
+			"editor.getSession()",
+			"getSession",
+			"editor.getSession()",
+			"getSession",
+			"editor.getSession()",
+			"edit",
+			"previewDelay",
+			"\"",
+			"window",
+			"ace",
+			"collide",
+			"collides",
+			"extent",
+			"components",
+			"extent",
+			", ",
+			" :",
+			":",
+			" / ",
+			"pos",
+			"-",
+			"(x1, y1) <-> (x2, y1) = (x1 - x2, y1 - y2)",
+			"+",
+			"<+>",
+			"action ==",
+			"actionTimeout = ",
+			"dodge",
+			"actionTimeout",
+			"dodgeCooldown",
+			"invuln",
+			"invulnCooldown",
+			"step",
+			"shielding()",
+			"\"",
+			"(\"",
+			"\"",
+			"\\\"",
+			", ",
+			"= none",
+			"{\n",
+			"sliding",
+			".vx",
+			"c.fillRect",
+			"left",
+			"render",
+			"facing",
+			"player.y",
+			"player.x",
+			"render",
+			"player.x",
+			"player.character.h",
+			"player.character.w",
+			"player.character.",
+			"player.character.w",
+			"render"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".shift()",
+			"\\1\\1",
+			"\\1.markdown \\2",
+			"\\2.markdown \\1",
+			".markdown \\1",
+			"\\1\\n",
+			"$1.shielding()",
+			"$1",
+			"shielding(player)",
+			"settings"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "html/js/site.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2552,
+								2555
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1672.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/css/style.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 7104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1509,
+								1509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1465.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "html/js/notex.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1356,
+								1356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 881.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.notex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11221,
+								11221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5813.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "background.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 122.0
+	},
+	"pinned_build_system": "",
+	"project": "NoTex.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
