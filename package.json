@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "ace-builds": "^1.2.2",
+    "jquery": "^2.1.4",
     "marked": "^0.3.5",
     "mathquill": "git://github.com/mathquill/mathquill#v0.9.4"
   }
