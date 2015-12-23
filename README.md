@@ -255,3 +255,9 @@ LaTeX:
 
 Nice and easy! All you need to do is chain integrals in the same way you chain sums!
 
+### NoTeX Sample
+
+Want to see NoTeX in action? This entire readme file is also available in NoTeX format! Just take a look at README.notex
+
+
+
