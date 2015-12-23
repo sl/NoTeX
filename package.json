@@ -1,6 +1,6 @@
 {
   "name": "NoTeX",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "NoTeX is a language, and editor for said language which simplifies the process of live typesetting notes in class.",
   "main": "html/index.html",
   "scripts": {
