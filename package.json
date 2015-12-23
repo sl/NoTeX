@@ -6,7 +6,7 @@
   "scripts": {
     "install": "make all",
     "preversion": "make PACKAGE",
-    "version": "make manifest.json PACKAGE && git add manifest.json PACKAGE",
+    "version": "make manifest.json PACKAGE && git add manifest.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
