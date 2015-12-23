@@ -19,7 +19,7 @@
     "url": "https://github.com/sl/NoTeX/issues"
   },
   "dependencies": {
-    "ace": "0.0.2",
+    "ace-builds": "^1.2.2",
     "marked": "^0.3.5"
   }
 }
