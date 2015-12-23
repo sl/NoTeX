@@ -13,17 +13,6 @@ var setShiftUp = function (e) {
   }
 };
 
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-    processEscapes: true
-  },
-  "HTML-CSS": { availableFonts: ["TeX"] }
-});
-
 window.addEventListener? document.addEventListener('keydown', setShiftDown) :
   document.attachEvent('keydown', setShiftDown);
 window.addEventListener? document.addEventListener('keyup', setShiftUp) :
@@ -79,47 +68,38 @@ function updatePreview() {
     preview.removeChild(preview.firstChild);
   }
   for (var i = 0; i < sections.length; ++i) {
-    var type = sections[i].type;
-    var content = sections[i].content;
-    var contentDiv = document.createElement('div');
-    if (type === 'markdown') {
-      contentDiv.setAttribute('class', 'markdown');
-      contentDiv.innerHTML = marked(content);
-    } else if (type === 'latex') {
-      try {
-        contentDiv = MathJax.HTML.Element('div', { 'class': 'latex'},
-          [content]);
-        contentDiv.setAttribute('class', 'latex')
-        console.log(contentDiv);
-      } catch (e) {
-        contentDiv.innerHTML = content;
-        error = document.createElement('div');
-        error.innerHTML = e.message;
-        contentDiv.appendChild(error);
-        contentDiv.setAttribute('class','error');
+    try {
+      var type = sections[i].type;
+      var content = sections[i].content;
+      var contentDiv = document.createElement('div');
+      contentDiv.setAttribute('class', type === "math" ? "notex" : type);
+      if (type === 'markdown') {
+        contentDiv.innerHTML = marked(content);
+      } else {
+        var latexBody = content;
+        if (type === 'math') {
+          // todo -- set latexBody to compiled notex equation
+          latexBody = "COMPILED NOTEX: " + content;
+        }
+        contentDiv.innerHTML = latexBody;
       }
-    } else {
-      contentDiv.setAttribute('class', 'notex');
-      if (content.startsWith('$')) {
-        content = content.substr(1).trim();
+      if (i === 0) {
+        contentDiv.style.marginTop = '6em';
       }
-      console.log('content: ' + content);
-      try {
-        var compiled = compileNotex(content);
-        console.log('result: ' + compiled);
-        katex.render(compiled, contentDiv, { displayMode: true });
-      } catch (e) {
-        contentDiv.innerHTML = '';
-        console.log(e);
+      if (i === sections.length - 1) {
+        contentDiv.style.marginBottom = '6em';
       }
+      preview.appendChild(contentDiv);
+      if (type !== 'markdown' && /* todo -- remove */ type !== 'math') {
+        $(contentDiv).mathquill();
+      }
+    } catch (e) {
+      contentDiv.innerHTML = content;
+      error = document.createElement('div');
+      error.innerHTML = e.message;
+      contentDiv.appendChild(error);
+      contentDiv.setAttribute('class','error');
     }
-    if (i === 0) {
-      contentDiv.style.marginTop = '6em';
-    }
-    if (i === sections.length - 1) {
-      contentDiv.style.marginBottom = '6em';
-    }
-    preview.appendChild(contentDiv);
   }
 }
 
