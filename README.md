@@ -141,7 +141,7 @@ is much simpler, and easier to write than
 
 and both end up producing the same result:
 
-![Equation Two](http://imgur.com/WMwZiWt)
+![Equation Two](http://i.imgur.com/WMwZiWt.png)
 
 ### Multiplication
 
