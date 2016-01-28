@@ -52,7 +52,6 @@ The worst case scenario is that you severly mess something up, and you don't hav
 
 We completely agree! (about the first part) LaTeX is pretty! That's why everything you write in NoTeX, including the markdown, can be compiled straight to LaTeX when you're done writing your notes. This allows you to go back, and make everything absolutely perfect when you don't need to be typing a thousand miles a minute. 
 
-<<<<<<< HEAD
 ### But What if I REALLY Need to Write Something in LaTeX?
 
 Fine then. If you really don't like our language that much. (just kidding, we know you love it)
