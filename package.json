@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "ace-builds": "^1.2.2",
-    "marked": "^0.3.5"
+    "marked": "^0.3.5",
+    "mathjax": "^2.5.1"
   }
 }

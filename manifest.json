@@ -1,1 +1,1 @@
-{"name":"NoTeX","description":"NoTeX is a language, and editor for said language which simplifies the process of live typesetting notes in class.","version":"0.0.7","manifest_version":2,"app":{"background":{"scripts":["background.js"]}}}
+{"name":"NoTeX","description":"NoTeX is a language, and editor for said language which simplifies the process of live typesetting notes in class.","version":"0.0.7","manifest_version":2,"sandbox":{"pages":["index.html"]},"app":{"background":{"scripts":["background.js"]}}}

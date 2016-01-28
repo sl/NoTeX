@@ -5,6 +5,9 @@ fs.writeFile("manifest.json", JSON.stringify({
   "description": pkg.description,
   "version": pkg.version,
   "manifest_version": 2,
+  "sandbox": {
+    "pages": ["index.html"]
+  },
   "app": {
     "background": {
       "scripts": ["background.js"]
